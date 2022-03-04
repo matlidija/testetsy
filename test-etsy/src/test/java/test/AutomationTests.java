@@ -53,7 +53,7 @@ public class AutomationTests extends BaseTest {
                           .customerPasswordField("123456789")
                           .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
-        Assert.assertEquals("Welcome to Etsy, Lidija!", automationHomeSignIn.welcomeTextIsGet());
+        Assert.assertEquals("Welcome back, Lidija!", automationHomeSignIn.welcomeTextIsGet());
         automationHomeSignIn.clickAccountButton()
                             .clickSignOutButton();
     }
@@ -96,7 +96,7 @@ public class AutomationTests extends BaseTest {
                         .clickFavoritesItemsList();
         js.executeScript("window.scrollBy(0,150)");
         Assert.assertTrue(automationItemsFav.itemsColectionIsDisplay());
-        Assert.assertEquals("149.00", automationItemsFav.itemsColectionIsGetText());
+        Assert.assertEquals("Favorite items", automationItemsFav.itemsColectionIsGetText());
         js.executeScript("window.scrollBy(0,-150)");
         automationHomeSignIn.clickAccountButton()
                             .clickSignOutButton();
