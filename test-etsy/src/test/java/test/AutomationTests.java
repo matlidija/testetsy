@@ -62,8 +62,8 @@ public class AutomationTests extends BaseTest {
     public void searchTest(){
         automationHome.clickSignButton();
         automationRegister.customerNewEmailField("lidao58@mail.com")
-                .customerPasswordField("123456789")
-                .clickLoginButton();
+                          .customerPasswordField("123456789")
+                          .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
         Assert.assertEquals("Welcome back, Lidija!", automationHomeSignIn.welcomeTextIsGet());
         automationHomeSignIn.setSearchField();
@@ -107,8 +107,8 @@ public class AutomationTests extends BaseTest {
     public void itemsRemove(){
         automationHome.clickSignButton();
         automationRegister.customerNewEmailField("lidao58@mail.com")
-                .customerPasswordField("123456789")
-                .clickLoginButton();
+                          .customerPasswordField("123456789")
+                          .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
         Assert.assertEquals("Welcome back, Lidija!", automationHomeSignIn.welcomeTextIsGet());
         automationHomeSignIn.setSearchField();
