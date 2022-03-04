@@ -10,7 +10,7 @@ public class AutomationItemsFav extends BaseTest {
     public AutomationItemsFav(){
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "//span[@class=\"currency-value\"]")
+    @FindBy(xpath = "//h2[@class="wt-text-title-03 wt-break-word wt-mr-xs-1 wt-mr-sm-2"]")
     WebElement itemsColection;
 
     public String itemsColectionIsGetText(){
