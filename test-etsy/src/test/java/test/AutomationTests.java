@@ -49,7 +49,7 @@ public class AutomationTests extends BaseTest {
     @Test
     public void signInTest(){
         automationHome.clickSignButton();
-        automationRegister.customerNewEmailField("lidao58@mail.com")
+        automationRegister.customerNewEmailField("lidijam1985@outlook.com")
                           .customerPasswordField("123456789")
                           .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
@@ -61,9 +61,9 @@ public class AutomationTests extends BaseTest {
     @Test
     public void searchTest(){
         automationHome.clickSignButton();
-        automationRegister.customerNewEmailField("lidao58@mail.com")
-                          .customerPasswordField("123456789")
-                          .clickLoginButton();
+        automationRegister.customerNewEmailField("lidijam1985@outlook.com")
+                .customerPasswordField("123456789")
+                .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
         Assert.assertEquals("Welcome back, Lidija!", automationHomeSignIn.welcomeTextIsGet());
         automationHomeSignIn.setSearchField();
@@ -85,7 +85,7 @@ public class AutomationTests extends BaseTest {
     @Test
     public void itemsAdd(){
         automationHome.clickSignButton();
-        automationRegister.customerNewEmailField("lidao58@mail.com")
+        automationRegister.customerNewEmailField("lidijam1985@outlook.com")
                           .customerPasswordField("123456789")
                           .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
@@ -106,9 +106,9 @@ public class AutomationTests extends BaseTest {
     @Test
     public void itemsRemove(){
         automationHome.clickSignButton();
-        automationRegister.customerNewEmailField("lidao58@mail.com")
-                          .customerPasswordField("123456789")
-                          .clickLoginButton();
+        automationRegister.customerNewEmailField("lidijam1985@outlook.com")
+                .customerPasswordField("123456789")
+                .clickLoginButton();
         Assert.assertTrue(automationHomeSignIn.welcomeTextIsDIsplay());
         Assert.assertEquals("Welcome back, Lidija!", automationHomeSignIn.welcomeTextIsGet());
         automationHomeSignIn.setSearchField();
@@ -122,7 +122,8 @@ public class AutomationTests extends BaseTest {
         driver.navigate().refresh();
         js.executeScript("window.scrollBy(0,200)");
         Assert.assertTrue(automationRemoveItems.notingTextIsDisplay());
-        Assert.assertEquals("Nothing here... yet.", automationRemoveItems.notingTextIsGet());
+        Assert.assertEquals("Nothing here... yet.\n" +
+                "These are a few of your favorite things... or they will be, once you favorite something.", automationRemoveItems.notingTextIsGet());
         js.executeScript("window.scrollBy(0,-200)");
         automationHomeSignIn.clickAccountButton()
                             .clickSignOutButton();
